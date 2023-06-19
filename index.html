@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
 		<title> Michael Edgington </title>
 	</head>
 	
-	<body>
-		<h1> Welcome to my website! </h1>
-		<a href="https://medgington00.github.io/mass-to-mass"> Play Mass To Mass </a>
+	<body id="body" onload="OnLoad()">
+			
+		<!-- NAVBAR -->
+		<div class="navbar"> 
+			<button id="page-one-button" class="nav-button" onclick="ScrollTo(1)"> HOME <div id="nav-button-underline-one" class="nav-button-underline"> HOME </div> </button>
+			<button id="page-two-button" class="nav-button" onclick="ScrollTo(2)"> ABOUT <div id="nav-button-underline-two" class="nav-button-underline"> ABOUT </div> </button>
+			<button id="page-three-button" class="nav-button" onclick="ScrollTo(3)"> PROJECTS <div id="nav-button-underline-three" class="nav-button-underline"> PROJECTS </div> </button>
+			<button id="page-four-button" class="nav-button" onclick="ScrollTo(4)"> CONTACT <div id="nav-button-underline-four" class="nav-button-underline"> CONTACT </div> </button>
+			
+			<div class="logo-box">
+				<a class="navbar-link" href="https://github.com/medgington00" target="_blank"> <img src="img/github.png"></a>
+				<a class="navbar-link" href="https://www.linkedin.com/in/michael-edgington-b62939237/" target="_blank"> <img src="img/linkedin.png"></a>
+				<a class="navbar-link" href="mailto:contact@michaeledgington.com"> <img src="img/email.png"></a>
+			</div>
+		</div>
+		
+		<!-- PAGE ONE (NAME AND JOB) -->
+		<section id="page-one" style="justify-content:center">
+			<div class="background-code" style="font-size: 26px"> &lt;h1&gt; </div>
+			<div class="header"> <p id="first-header-p"> Michael Edgington </p> </div>
+			<div class="comment-code"> <p id="first-comment-p">  </p> </div>
+			<div class="background-code" style="font-size: 26px"> &lt;/h1&gt; </div>
+		</section>
+		
+		<!-- PAGE TWO (ABOUT) -->
+		<section id="page-two" >
+		
+			<div class="background-code"><br><br>&lt;h2&gt; </div>
+			
+			<div class="subheader"> About </div>
+			
+			<div class="background-code"> &lt;/h2&gt; </div>
+			
+			<div class="background-code"> <br><br> &emsp;&emsp;&emsp;&lt;p&gt; </div>
+			
+			<div class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
+			
+			<div class="background-code"> &emsp;&emsp;&emsp;&lt;/p&gt; </div>
+		</section>
+		
+		<!-- PAGE 3 (PROJECTS) -->
+		<section id="page-three">
+			<div class="background-code"><br><br>&lt;h2&gt; </div>
+		
+			<div class="subheader"> Projects </div>
+		
+			<div class="background-code"> &lt;/h2&gt; </div>
+			
+			<div class="projects-container">
+				<!-- MASS TO MASS -->
+				<a href="https://medgington00.github.io/mass-to-mass/" target="_blank">
+				<div class="project-box"> 
+					<img class = "new-tab-img" src="img/new-tab.png"> 
+				
+					<div class="project-img-box" style="background-image: url('img/mass-to-mass.png');"></div>
+					
+					<div class="project-text">
+						<div class="project-title"> Mass To Mass </div>
+						<div class="project-subtitle"> A Javascript-based webgame where the player must guess which country has a larger amount of land between two random countries. Comes with multiple settings and increasing difficulty. </div>
+					</div>
+				</div>
+				</a>
+				<!-- PLACEHOLDER -->
+				<a href="https://www.theogdenver.com/" target="_blank">
+				<div class="project-box"> 
+					<img class = "new-tab-img" src="img/new-tab.png"> 
+					
+				
+					<div class="project-img-box" style="background-image: url('img/placeholder.png');"></div>
+					
+					<div class="project-text">
+						<div class="project-title"> The Original</div>
+						<div class="project-subtitle"> Webpage for <i>The Original</i> Restaraunt in Denver, Colorado. THIS IS BEING USED AS A PLACEHOLDER EXAMPLE AND IS NOT BY ME.  </div>
+					</div>
+				</div>
+				</a>
+			</div>
+			
+		</section>
+		
+		<!-- PAGE FOUR (CONTACT) -->
+		<section id="page-four">
+		
+			<div class="background-code"><br><br>&lt;h2&gt; </div>
+			
+			<div class="subheader"> Contact Me </div>
+			
+			<div class="background-code"> &lt;/h2&gt; </div>
+
+			<div class="background-code"><br><br>&lt;form style="justify-content:center;"&gt; </div>
+
+			<span style="width:100%;height:60dvh;display:flex;justify-content:center;align-items:center;">
+
+			<form class= "form-container" method="post" action="send-email.php">
+			
+				<div class="form-container-first">
+			
+					<label for="name"> Name </label>
+					<input class="contact-input" type="text" name="name" id="name" required>
+					
+					<label for="email"> E-Mail </label>
+					<input class="contact-input" type="email" name="email" id="email" required>
+					
+					<label for="subject"> Subject </label>
+					<input class="contact-input" type="text" name="subject" id="subject" required>
+				
+				</div>
+				
+				<div class="form-container-second">
+				
+					<label for="message"> Message </label>
+					<textarea class="contact-input" name="message" id="message" required></textarea>
+				
+				</div>
+				
+				<button> Send </button>
+				
+			</form>
+			
+			</span>
+			
+			<div class="background-code"><br><br>&lt;/form&gt; </div>
+			
+		</section>
+		
+		<script src="script.js"></script>
+		
 	</body>
 </html>
